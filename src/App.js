@@ -1,3 +1,4 @@
+import "./App.css"
 import { useState } from "react";
 import SearchBar from "./components/SearchBar";
 import ImageList from "./components/ImageList";
@@ -8,7 +9,7 @@ function App(){
     const result = await searchImages(term);
     setImages(result);
   }
-  return( <div>
+  return( <div className="container">
     <SearchBar onSubmit={handleSubmit}/>
     <ImageList images={images} />
   </div>
